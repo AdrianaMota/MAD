@@ -47,6 +47,14 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.6"
 
+"@babel/polyfill@^7.2.5":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/polyfill/-/polyfill-7.12.1.tgz#1f2d6371d1261bbd961f3c5d5909150e12d0bd96"
+  integrity sha512-X0pi0V6gxLi6lFZpGmeNa4zxtwEmCs42isWLNjZZDE0Y8yVfgu0T2OAHlzBbdYlqbW/YXVvoBHpATEM+goCj8g==
+  dependencies:
+    core-js "^2.6.5"
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.0.0", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3":
   version "7.20.1"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.20.1.tgz#1148bb33ab252b165a06698fde7576092a78b4a9"
@@ -936,6 +944,29 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.3.0.tgz#ea89004119dc42db2e1dba0f97d553f7372f6fcb"
   integrity sha512-AHPmaAx+RYfZz0eYu6Gviiagpmiyw98ySSlQvCUhVGDRtDFe4DBS0x1bSjdF3gqUDYOczB+yYvBTtEylYSdRhg==
 
+"@fontsource/dancing-script@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/dancing-script/-/dancing-script-4.5.10.tgz#653bf55266e2d3ff8dec8209d0468650cefa904c"
+  integrity sha512-yTHWmLaucOa95f5NRgUke4kVtlmxhPKopKh3tGXNqlAByC1J/L59ALtjD6XyybpM22/ScShFIwrqqWhnCEeFiw==
+
+"@fontsource/marcellus@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/marcellus/-/marcellus-4.5.10.tgz#0c5caead0f3919a7f989fb7fc39ec493779de54b"
+  integrity sha512-dT3Qw5GZUiLvJ2qRBuV0IME7X1bkEGzZ7U0r7KIXCUTcTkEQbk2nNyhGO5vNvNUe6/sD/98fusvWjj01+QPyHg==
+
+"@fontsource/montserrat@^4.5.13":
+  version "4.5.13"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.13.tgz#58f12419c05e131b09ab17e9181aa24fb9c84b3a"
+  integrity sha512-/XlcNsMFjdWX4Away8Ax/4NgND8Ckk9gVDwgz1sfxF6h+gFHChLOV0IvPrUfCQjZ1F35igg+nR9bSxmjsYEskQ==
+
+"@fullpage/react-fullpage@^0.1.30":
+  version "0.1.30"
+  resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.30.tgz#ba74b5b0bd1077f21c71dcad9b432f4dd0f2da22"
+  integrity sha512-MjZohl/jpHsE5riuAgHifFpue+2zROrC+GgEzOnHEgkEAdLP4MGv43sCjIKHX+3hyH+rOKu87EaiQfCTrNmqGw==
+  dependencies:
+    "@babel/polyfill" "^7.2.5"
+    fullpage.js "^4.0.14"
+
 "@motionone/animation@^10.12.0":
   version "10.14.0"
   resolved "https://registry.yarnpkg.com/@motionone/animation/-/animation-10.14.0.tgz#2f2a3517183bb58d82e389aac777fe0850079de6"
@@ -1205,6 +1236,11 @@ copy-to-clipboard@3.3.1:
   dependencies:
     toggle-selection "^1.0.6"
 
+core-js@^2.6.5:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
+  integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
+
 cosmiconfig@^7.0.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-7.1.0.tgz#1443b9afa596b670082ea46cbd8f6a62b84635f6"
@@ -1289,6 +1325,11 @@ framesync@6.0.1:
   integrity sha512-fUY88kXvGiIItgNC7wcTOl0SNRCVXMKSWW2Yzfmn7EKNc+MpCzcz9DhdHcdjbrtN3c6R4H5dTY2jiCpPdysEjA==
   dependencies:
     tslib "^2.1.0"
+
+fullpage.js@^4.0.14:
+  version "4.0.14"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-4.0.14.tgz#e9a185b772ba522b20929d717bf6bce251b2542c"
+  integrity sha512-vWo6846aDby/P4j6U4OZ5tVSbxxdAmPBL/AOumtZ7Ea2wcT7umBVw54RLhROlARPUpFSqUJopXLTfHVilSw+VA==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -1546,7 +1587,7 @@ react@18.2.0:
   dependencies:
     loose-envify "^1.1.0"
 
-regenerator-runtime@^0.13.10:
+regenerator-runtime@^0.13.10, regenerator-runtime@^0.13.4:
   version "0.13.10"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.10.tgz#ed07b19616bcbec5da6274ebc75ae95634bfc2ee"
   integrity sha512-KepLsg4dU12hryUO7bp/axHAKvwGOCV0sGloQtpagJ12ai+ojVDqkeGSiRX1zlq+kjIMZ1t7gpze+26QqtdGqw==
