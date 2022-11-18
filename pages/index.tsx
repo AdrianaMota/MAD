@@ -7,6 +7,7 @@ import {
 	Flex,
 	Heading,
 	Box,
+	HStack,
 } from "@chakra-ui/react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
@@ -34,7 +35,33 @@ export default function Home() {
 									<Image src="/hero.png" />
 								</Stack>
 							</div>
-							<div className="section"></div>
+							<div className="section">
+								<Flex
+									h="100vh"
+									bgColor={"yellow.300"}
+									alignItems="center"
+									justifyContent={"space-between"}
+								>
+									<Stack w="50vw" gap="2rem" ml="4rem">
+										<Heading>What we do</Heading>
+										<Text>
+											We put together the perfect team of professional to
+											understand the client’s vision and goals to provide the
+											best possible service and help grow their business. We
+											find the best talents for every role and care for their
+											well being and career. This sets us apart from other
+											companies since{" "}
+											<strong>our people is our best asset.</strong>
+										</Text>
+										<HStack gap="1.5rem">
+											<Button variant="yellow">Designing</Button>
+											<Button variant="yellow">Drafting</Button>
+											<Button variant="yellow">Filing</Button>
+										</HStack>
+									</Stack>
+									<Image h="100vh" src="./building.png" />
+								</Flex>
+							</div>
 						</ReactFullpage.Wrapper>
 					);
 				}}

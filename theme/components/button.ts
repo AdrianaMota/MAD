@@ -5,6 +5,7 @@ const variantBase = defineStyle(() => {
 		bg: "pink.500",
 		color: "brown.500",
 		fontFamily: "heading",
+		fontWeight: "400",
 		_hover: {
 			bg: "pink.600",
 		},
@@ -16,6 +17,7 @@ const variantYellow = defineStyle(() => {
 		bg: "yellow.500",
 		color: "brown.500",
 		fontFamily: "heading",
+		fontWeight: "400",
 		_hover: {
 			bg: "yellow.600",
 		},
