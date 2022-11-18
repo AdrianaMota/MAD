@@ -13,12 +13,6 @@ const styles = {
 			fontFamily: "main",
 			color: "grey.500",
 		},
-		a: {
-			color: "beige.500",
-			_hover: {
-				textDecoration: "underline",
-			},
-		},
 	},
 };
 

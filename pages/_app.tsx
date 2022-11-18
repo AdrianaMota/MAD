@@ -5,6 +5,7 @@ import theme from "../theme";
 import "@fontsource/dancing-script";
 import "@fontsource/marcellus";
 import "@fontsource/montserrat";
+import "swiper/css/bundle";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
