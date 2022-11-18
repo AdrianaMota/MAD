@@ -1,17 +1,18 @@
 import {
 	Stack,
-	Box,
+	Button,
 	Text,
 	VStack,
 	Image,
 	Flex,
 	Heading,
+	Box,
 } from "@chakra-ui/react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
 export default function Home() {
 	return (
-		<>
+		<Stack spacing={0}>
 			<ReactFullpage
 				anchors={["hero", "projects", "about", "contact"]}
 				menu="#menu"
@@ -21,29 +22,23 @@ export default function Home() {
 					return (
 						<ReactFullpage.Wrapper>
 							<div className={"section"}>
-								<Box bgColor={"red"} w="300px" h="300px">
-									HELLOOO
-								</Box>
+								<Stack
+									bgGradient="radial-gradient(50% 50% at 50% 50%, #F7E7E0 0%, #F4D7C9 100%);"
+									h="100vh"
+								>
+									<Image src="./Logo.png" w="13rem" ml="2rem" mt="2rem" />
+									<Box mt="5rem" mb="5rem" textAlign={"center"}>
+										<Heading variant="heading">Architecture</Heading>
+										<Heading variant="subheading">mad perfect</Heading>
+									</Box>
+									<Image src="/hero.png" />
+								</Stack>
 							</div>
-							<div className="section">
-								<Box bgColor={"blue"} w="300px" h="300px">
-									HOLAAAA
-								</Box>
-							</div>
-							<div className="section">
-								<Box bgColor={"teal"} w="300px" h="300px">
-									BONJOURR
-								</Box>
-							</div>
-							<div className="section ">
-								<Box bgColor={"pink"} w="300px" h="300px">
-									KONICHIWA
-								</Box>
-							</div>
+							<div className="section"></div>
 						</ReactFullpage.Wrapper>
 					);
 				}}
 			/>
-		</>
+		</Stack>
 	);
 }

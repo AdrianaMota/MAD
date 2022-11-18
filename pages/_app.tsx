@@ -1,15 +1,17 @@
 import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
-import defaultTheme from "../utils/theme";
+import theme from "../theme";
 
 import "@fontsource/dancing-script";
 import "@fontsource/marcellus";
 import "@fontsource/montserrat";
 
-export default function App({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<ChakraProvider theme={defaultTheme}>
+		<ChakraProvider theme={theme}>
 			<Component {...pageProps} />
 		</ChakraProvider>
 	);
 }
+
+export default MyApp;
