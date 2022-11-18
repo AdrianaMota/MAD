@@ -18,6 +18,7 @@ import "swiper/css/pagination";
 import Cube from "../components/Cube";
 import Form from "../components/Form";
 import Testimonial from "../components/Testimonial";
+import Navbar from "../components/navbar/Navbar";
 
 export default function Home() {
 	const pageMargin = "2rem";
@@ -38,19 +39,7 @@ export default function Home() {
 									bgGradient="radial-gradient(50% 50% at 50% 50%, #F7E7E0 0%, #F4D7C9 100%);"
 									h="100vh"
 								>
-									<HStack
-										justifyContent={"space-between"}
-										mx={pageMargin}
-										mt={pageMargin}
-									>
-										<Image src="./Logo.png" w="13rem" />
-										<HStack gap="3rem">
-											<Text as="a">What we do</Text>
-											<Box as="a" href="#contact" data-menuanchor="contact">
-												<Button variant="brown">Contact us</Button>
-											</Box>
-										</HStack>
-									</HStack>
+									<Navbar margin={pageMargin} />
 									<Box mt="5rem" mb="5rem" textAlign={"center"}>
 										<Heading variant="heading">Architecture</Heading>
 										<Heading variant="subheading">mad perfect</Heading>

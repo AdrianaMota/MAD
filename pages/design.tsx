@@ -8,21 +8,14 @@ import {
 	Text,
 	Heading,
 } from "@chakra-ui/react";
+import Navbar from "../components/navbar/Navbar";
 
 export default function design() {
 	const pageMargin = "2rem";
 	const sectionMargin = "6rem";
 	return (
 		<Stack>
-			<HStack justifyContent={"space-between"} mx={pageMargin} mt={pageMargin}>
-				<Image src="./Logo.png" w="13rem" />
-				<HStack gap="3rem">
-					<Text as="a">What we do</Text>
-					<Box as="a" href="#contact" data-menuanchor="contact">
-						<Button variant="brown">Contact us</Button>
-					</Box>
-				</HStack>
-			</HStack>
+			<Navbar margin={pageMargin} />
 			<Flex
 				pt="10rem"
 				px={sectionMargin}
