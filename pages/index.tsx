@@ -22,7 +22,7 @@ import Navbar from "../components/navbar/Navbar";
 
 export default function Home() {
 	const pageMargin = "2rem";
-	const sectionMargin = "6rem";
+	const sectionMargin = `6rem`;
 
 	return (
 		<Stack spacing={0}>
@@ -38,13 +38,24 @@ export default function Home() {
 								<Stack
 									bgGradient="radial-gradient(50% 50% at 50% 50%, #F7E7E0 0%, #F4D7C9 100%);"
 									h="100vh"
+									justifyContent={"space-between"}
 								>
 									<Navbar margin={pageMargin} />
-									<Box mt="5rem" mb="5rem" textAlign={"center"}>
-										<Heading variant="heading">Architecture</Heading>
-										<Heading variant="subheading">mad perfect</Heading>
+									<Box pt={{ base: "10rem", md: "5rem" }} textAlign={"center"}>
+										<Heading
+											variant="heading"
+											fontSize={{ base: "md", sm: "xl", md: "xxl" }}
+										>
+											Architecture
+										</Heading>
+										<Heading
+											variant="subheading"
+											fontSize={{ base: "md", sm: "lg", md: "xl" }}
+										>
+											mad perfect
+										</Heading>
 									</Box>
-									<Image src="/hero.png" />
+									<Image src="/hero.png" objectFit={"cover"} />
 								</Stack>
 							</div>
 							<div className="section">
@@ -53,10 +64,19 @@ export default function Home() {
 									bgColor={"yellow.300"}
 									alignItems="center"
 									justifyContent={"space-between"}
+									direction={{ base: "column", md: "row" }}
 								>
-									<Stack w="50vw" gap="2rem" ml={sectionMargin}>
-										<Heading>What we do</Heading>
-										<Text>
+									<Stack
+										maxW={{ base: "100vw", md: "50vw" }}
+										gap="2rem"
+										ml={{ base: "2rem", md: sectionMargin }}
+										mr={{ base: sectionMargin, md: 0 }}
+										my={{ base: "4rem", md: 0 }}
+									>
+										<Heading fontSize={{ base: "md", md: "lg" }}>
+											What we do
+										</Heading>
+										<Text fontSize={{ base: "xs", md: "sm" }}>
 											We put together the perfect team of professional to
 											understand the client’s vision and goals to provide the
 											best possible service and help grow their business. We
@@ -65,7 +85,10 @@ export default function Home() {
 											companies since{" "}
 											<strong>our people is our best asset.</strong>
 										</Text>
-										<HStack gap="1.5rem">
+										<Stack
+											gap="1.5rem"
+											direction={{ base: "column", md: "row" }}
+										>
 											<Box as="a" href="#design" data-menuanchor="design">
 												<Button variant="yellow">Designing</Button>
 											</Box>
@@ -75,9 +98,13 @@ export default function Home() {
 											<Box as="a" href="#filing" data-menuanchor="filing">
 												<Button variant="yellow">Filing</Button>
 											</Box>
-										</HStack>
+										</Stack>
 									</Stack>
-									<Image h="100vh" src="./building.png" />
+									<Image
+										h="100vh"
+										src="./building.png"
+										w={{ base: "100hw", md: "" }}
+									/>
 								</Flex>
 							</div>
 							<div className="section" style={{ position: "relative" }}>
@@ -88,11 +115,26 @@ export default function Home() {
 									left="0"
 									position="absolute"
 									zIndex={"-1"}
+									objectFit="cover"
+									h="100vh"
 								/>
-								<Flex h="100vh" alignItems="center">
-									<Stack w="50vw" gap="2rem" ml={sectionMargin}>
-										<Heading>Designing</Heading>
-										<Text>
+								<Flex
+									h="100vh"
+									alignItems="center"
+									justifyContent={"space-between"}
+									mx={{ base: 0, md: sectionMargin }}
+									py={{ base: "4rem", md: 0 }}
+									direction={{ base: "column", md: "row" }}
+								>
+									<Stack
+										maxW={{ base: "100vw", md: "50vw" }}
+										gap="2rem"
+										mx={{ base: "2rem", md: 0 }}
+									>
+										<Heading fontSize={{ base: "md", md: "lg" }}>
+											Designing
+										</Heading>
+										<Text fontSize={{ base: "xs", md: "sm" }}>
 											Our architectural services include modeling, rendering and
 											designing. We will provide you with a hands-on creative
 											team that will bring value to your company from day one.
@@ -100,38 +142,11 @@ export default function Home() {
 											concentrating not only on the design, but also in its
 											functionality and graphic representation.
 										</Text>
-										<Box>
+										<Box as="a" href="/design">
 											<Button>View More</Button>
 										</Box>
 									</Stack>
-									{/* <Box>
-										<Swiper
-											effect={"cube"}
-											grabCursor={true}
-											cubeEffect={{
-												shadow: true,
-												slideShadows: true,
-												shadowOffset: 20,
-												shadowScale: 0.94,
-											}}
-											pagination={true}
-											modules={[EffectCube, Pagination]}
-											className="mySwiper"
-										>
-											<SwiperSlide>
-												<Image src="https://swiperjs.com/demos/images/nature-1.jpg" />
-											</SwiperSlide>
-											<SwiperSlide>
-												<Image src="https://swiperjs.com/demos/images/nature-2.jpg" />
-											</SwiperSlide>
-											<SwiperSlide>
-												<Image src="https://swiperjs.com/demos/images/nature-3.jpg" />
-											</SwiperSlide>
-											<SwiperSlide>
-												<Image src="https://swiperjs.com/demos/images/nature-4.jpg" />
-											</SwiperSlide>
-										</Swiper>
-									</Box> */}
+									<Image src="/design.png" w="50rem" mt="4rem" />
 								</Flex>
 							</div>
 							<div className="section" style={{ position: "relative" }}>
@@ -142,16 +157,32 @@ export default function Home() {
 									left="0"
 									position="absolute"
 									zIndex={"-1"}
+									objectFit="cover"
+									h="100vh"
 								/>
-								<Flex h="100vh" alignItems="center" justifyContent={"right"}>
-									<Stack w="50vw" gap="2rem" mr={sectionMargin}>
-										<Heading>Drafting</Heading>
-										<Text>
+								<Flex
+									pt={{ base: "6rem", md: 0 }}
+									h="100vh"
+									alignItems="center"
+									justifyContent={"space-between"}
+									mx={{ base: 0, md: sectionMargin }}
+									direction={{ base: "column-reverse", md: "row" }}
+								>
+									<Image src="/draft.png" w="50rem" />
+									<Stack
+										maxW={{ base: "100vw", md: "50vw" }}
+										gap="2rem"
+										mx={{ base: "2rem", md: 0 }}
+									>
+										<Heading fontSize={{ base: "md", md: "lg" }}>
+											Drafting
+										</Heading>
+										<Text fontSize={{ base: "xs", md: "sm" }}>
 											Our architectural services include drafting and detailing.
 											We will draft whatever you need and deliver high-quality,
 											clean work in a timely manner.
 										</Text>
-										<Box>
+										<Box as="a" href="/draft">
 											<Button variant="yellow">View More</Button>
 										</Box>
 									</Stack>
@@ -162,12 +193,20 @@ export default function Home() {
 									h="100vh"
 									justifyContent={"space-between"}
 									alignItems="center"
-									px={sectionMargin}
+									direction={{ base: "column", md: "row" }}
+									px={{ base: 0, md: sectionMargin }}
 									bgGradient="conic-gradient(from 180deg at 50% 50%, #E2BDBD -82.5deg, #FDE8DE 136.88deg, #E2BDBD 277.5deg, #FDE8DE 496.88deg)"
 								>
-									<Stack w="50vw" gap="2rem">
-										<Heading>Filing</Heading>
-										<Text>
+									<Stack
+										maxW={{ base: "100vw", md: "50vw" }}
+										gap="2rem"
+										py={{ base: "4rem", md: 0 }}
+										px={{ base: "2rem", md: 0 }}
+									>
+										<Heading fontSize={{ base: "md", md: "lg" }}>
+											Filing
+										</Heading>
+										<Text fontSize={{ base: "xs", md: "sm" }}>
 											We go wall the way. Our team of experts will not only
 											draft or design your pojects, they’ll put together any
 											kind of legal document required for the prject to be filed
@@ -175,33 +214,39 @@ export default function Home() {
 											Construction Fence Plan, Site Safety Plan, etc.
 										</Text>
 									</Stack>
-									<Image src="./filing.png" w="35rem" />
+									<Image
+										src="./filing.png"
+										w={{ base: "100vw", md: "35rem" }}
+									/>
 								</Flex>
 							</div>
 							<div className="section">
 								<Flex
-									pl={sectionMargin}
+									px={{ base: "2rem", md: sectionMargin }}
+									pt={{ base: "4rem", md: 0 }}
 									h="100vh"
 									bgColor={"beige.300"}
 									alignItems={"center"}
 									justifyContent="space-between"
+									direction={{ base: "column", md: "row" }}
+									objectFit="cover"
 								>
-									<Stack>
+									<Stack mb="4rem">
 										<Heading mb="3rem">Let's get in touch</Heading>
 										<Form />
 									</Stack>
-									<Stack gap="4rem">
+									<Stack gap="4rem" bgColor={"beige.300"}>
 										<Testimonial
-											margin={sectionMargin}
-											name="John"
-											profession="civil engineer"
-											text="“Martha Chumo is no ordinary 18 year old. In one summer, she taught herself to code and got a job.”"
+											margin={{ sectionMargin }}
+											name="Raphael"
+											profession="Business Owner"
+											text="“Their commitment and punctuality are on point. The designs are very elegant.”"
 										/>
 										<Testimonial
 											margin={sectionMargin}
-											name="Pam"
-											profession="Architect"
-											text="“When it comes to backlink analysis, Ahrefs is my #1 go-to tool. If you’re serious about SEO, you need Ahrefs.”"
+											name="Tommy"
+											profession="Civil Engineer"
+											text="“Customer service is perfect and their results are beyond professional. Always my go to architects.”"
 										/>
 									</Stack>
 								</Flex>

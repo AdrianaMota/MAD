@@ -7,7 +7,11 @@ const Navbar = ({ ...props }) => {
 	return (
 		<HStack justifyContent={"space-between"} mx={margin} mt={margin}>
 			<Logo />
-			<Flex gap="3rem" alignItems={"center"}>
+			<Flex
+				gap="3rem"
+				alignItems={"center"}
+				display={{ base: "none", md: "flex" }}
+			>
 				<NavItem content="What we do" slug="what-we-do" />
 				<Box as="a" href="./#contact" data-menuanchor="contact">
 					<Button variant="brown">Contact us</Button>

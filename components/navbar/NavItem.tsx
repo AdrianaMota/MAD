@@ -5,7 +5,7 @@ const NavItem = ({ ...props }) => {
 	return (
 		<Box
 			as="a"
-			href={"./#" + { slug }}
+			href={"./#" + slug}
 			data-menuanchor={slug}
 			position={"relative"}
 			_after={{

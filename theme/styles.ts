@@ -5,7 +5,7 @@ const styles = {
 			fontSize: "10px",
 		},
 		body: {
-			fontSize: "md",
+			fontSize: "sm",
 			fontFamily: "main",
 			fontWeight: "400",
 		},

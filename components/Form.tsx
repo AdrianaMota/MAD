@@ -67,7 +67,7 @@ const Form = () => {
 			borderRadius: "0",
 			padding: "2rem",
 			minHeight: "4rem",
-			fontSize: "md",
+			fontSize: "sm",
 			_placeholder: {
 				color: "brown.400",
 			},
