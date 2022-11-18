@@ -46,7 +46,9 @@ export default function Home() {
 										<Image src="./Logo.png" w="13rem" />
 										<HStack gap="3rem">
 											<Text as="a">What we do</Text>
-											<Button variant="brown">Contact us</Button>
+											<Box as="a" href="#contact" data-menuanchor="contact">
+												<Button variant="brown">Contact us</Button>
+											</Box>
 										</HStack>
 									</HStack>
 									<Box mt="5rem" mb="5rem" textAlign={"center"}>
