@@ -10,6 +10,7 @@ import {
 	HStack,
 } from "@chakra-ui/react";
 import ReactFullpage from "@fullpage/react-fullpage";
+import Head from "next/head";
 import { EffectCube, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -26,6 +27,9 @@ export default function Home() {
 
 	return (
 		<Stack spacing={0}>
+			<Head>
+				<title>Mad Studio</title>
+			</Head>
 			<ReactFullpage
 				anchors={["hero", "what-we-do", "design", "draft", "filing", "contact"]}
 				menu="#menu"
